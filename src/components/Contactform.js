@@ -31,7 +31,7 @@ this.setState({[name]:value})
             class="block w-full bg-purple-200 text-gray-700
             border border-purple-200 rounded
             py-3 px-4 leading-tight
-            focus:outline-none focus:border-purple-500"
+            focus:outline-none focus:border-purple-500 focus:bg-indigo-50"
             /></div>
             <br />
             <div class="w-full md:w-1/2 px-3">
@@ -46,7 +46,7 @@ this.setState({[name]:value})
             class="block w-full bg-purple-200 text-gray-700
             border border-purple-200 rounded
             py-3 px-4 leading-tight
-            focus:outline-none focus:border-purple-500"
+            focus:outline-none focus:border-purple-500 focus:bg-indigo-50"
             /></div>
             <br />
             </div>
@@ -64,7 +64,7 @@ this.setState({[name]:value})
             class="block w-full bg-purple-200 text-gray-700
             border border-purple-200 rounded
             py-3 px-4 leading-tight
-            focus:outline-none focus:border-purple-500"
+            focus:outline-none focus:border-purple-500 focus:bg-indigo-50"
             />
             </div>
             <div class="w-full px-3 mt-6">
@@ -75,10 +75,12 @@ this.setState({[name]:value})
             name="message"
             value={this.state.message}
             onChange={this.handleChange}
+            placeholder="Write your message here"
             class="block w-full bg-purple-200 text-gray-700
             border border-purple-200 rounded
             py-3 px-4 leading-tight
-            focus:outline-none focus:border-purple-500"
+            focus:outline-none focus:border-purple-500
+            focus:bg-indigo-50"
             />
             </div>
             <div class="w-full px-3 mt-5 mb-5">
@@ -92,8 +94,9 @@ this.setState({[name]:value})
             <h1>You entered:{this.state.firstName}
             <br/>{this.state.lastName}
             <br/>{this.state.telefoneNumber}
+            <br />{this.state.message}
             </h1>
-            <br /><br /><br />
+            <br /><br />
             
             </div>
             </form>
