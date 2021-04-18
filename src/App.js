@@ -13,7 +13,7 @@ class App extends React.Component {
   render(){
   return (
     <div class="bg-indigo-100"> 
-    <Router>
+
     <Navbar />
     <Switch>
         <Route exact path="/" />
@@ -22,7 +22,7 @@ class App extends React.Component {
         <Contact />
         <Route path="/recipe" component={Recipe} />
     </Switch>
-    </Router>
+    
     </div> 
     
     )
