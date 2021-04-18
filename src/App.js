@@ -10,18 +10,15 @@ class App extends React.Component {
     super()
     this.state ={}
   }
-  
- 
   render(){
   return (
     <div class="bg-indigo-100"> 
     <Router>
     <Navbar />
     <Switch>
-        <Route exact path="/" exact component={Home} />
+        <Route exact path="/" component={Home} />
         <Route path="/contact" component={Contact} />
         <Route path="/recipe" component={Recipe} />
-        
     </Switch>
     </Router>
     </div> 
