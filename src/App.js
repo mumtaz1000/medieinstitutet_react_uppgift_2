@@ -1,9 +1,10 @@
 import React from "react"
-import {Route, BrowserRouter as Router, Switch} from "react-router-dom"
+import {Route, Switch} from "react-router-dom"
 import Navbar from "./components/Navbar"
 import Home from "./pages/Home"
 import Contact from "./pages/Contact"
 import Recipe from "./pages/Recipedata"
+import Card from "./components/Card"
 
 class App extends React.Component {
   constructor(){
@@ -13,8 +14,8 @@ class App extends React.Component {
   render(){
   return (
     <div class="bg-indigo-100"> 
-
     <Navbar />
+    <Card />
     <Switch>
         <Route exact path="/" />
         <Home />
