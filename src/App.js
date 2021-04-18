@@ -15,12 +15,11 @@ class App extends React.Component {
   return (
     <div class="bg-indigo-100"> 
     <Navbar />
-    <Card />
+   
     <Switch>
-        <Route exact path="/" />
-        <Home />
-        <Route path="/contact" />
-        <Contact />
+        <Route exact path="/" component={Home}/>
+
+        <Route path="/contact" component={Contact }/>
         <Route path="/recipe" component={Recipe} />
     </Switch>
     
