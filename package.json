@@ -1,4 +1,5 @@
 {
+  "homepage": "hppts://mumtaz1000.github.io/Medieinstitutet_React_uppgift1",
   "name": "foodie-app",
   "version": "0.1.0",
   "private": true,
@@ -15,10 +16,14 @@
     "web-vitals": "^1.1.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject"
+    
+
   },
   "eslintConfig": {
     "extends": [
