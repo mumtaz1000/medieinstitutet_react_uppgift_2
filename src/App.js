@@ -16,7 +16,7 @@ class App extends React.Component {
     <div class="bg-indigo-100"> 
     <Navbar />
     <Switch>
-        <Route exact path={process.env.PUBLIC_URL + '/'} component={Home}/>
+        <Route exact path='/' component={Home}/>
 
         <Route path="/contact" component={Contact }/>
         <Route path="/recipe" component={Recipe} />
