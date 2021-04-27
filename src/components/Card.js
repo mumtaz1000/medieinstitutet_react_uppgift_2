@@ -1,30 +1,28 @@
 import React from "react"
-import {Link} from "react-router-dom"
-import ImageOne from "../images/pizza.jpg"
-const Card = () =>{
+//import {Link} from "react-router-dom"
+
+const Card = ({recipe}) =>{
     return(
-        <div class=" px-4 py-8 max-w-md mx-auto">
-        <img src={ImageOne} 
+        <div className=" px-4 py-8 max-w-md mx-auto">
+        <img src={recipe.image} 
         alt="egg" 
-        class=" rounded-t-lg" />
-        <div class="bg-white  text-center w-full py-5 rounded-b-lg">
-        <h2 class="text-2xl mb-2">Pizza</h2>
-        <p class="mb-2">I am just a humble pizza!</p>
-        <button class="bg-indigo-900 
+        className=" rounded-t-lg" />
+        <div className="bg-white  text-center w-full py-5 rounded-b-lg">
+        <h2 className="text-2xl mb-2">{recipe.title}</h2>
+        <p className="mb-2">I am just a humble pizza!</p>
+        <button className="bg-indigo-900 
         hover:bg-indigo-300
         text-white 
         font-semibold 
         py-2 px-2 rounded">50 sek</button>
-         <button class="bg-indigo-900 
+         <button className="bg-indigo-900 
         hover:bg-indigo-300
         text-white 
         font-semibold 
         py-2 px-2 
         rounded
         ml-2">
-         <Link to="/recipe">
-        Recipe
-      </Link>
+        
         </button>
         </div>
         </div>

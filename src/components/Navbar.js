@@ -14,6 +14,9 @@ function Navbar(){
       <Link to="/contact">
         Contact Form
       </Link>
+      <Link to="/search/:id">
+        Search Recipe
+      </Link>
       </div>
       <button className="bg-indigo-900 
       hover:bg-indigo-300

@@ -23,7 +23,7 @@ useEffect(()=>{
             setIsPending(false);
             setError(err.message)
         })
-        },10);
+        },100);
     },[SearchQuery])
     return {recipe, isPending, error}
 }

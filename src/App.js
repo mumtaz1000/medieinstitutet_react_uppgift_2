@@ -1,11 +1,12 @@
 import React from "react"
 import {Route, Switch} from "react-router-dom"
 import Navbar from "./components/Navbar"
+//import Shop from "./pages/Shop"
 import Home from "./pages/Home"
 import Contact from "./pages/Contact"
-import Recipe from "./pages/Recipedata"
 import NotFound from "./pages/NotFound"
-
+import Search from "./pages/SearchRecipe"
+import SearchOption from "./pages/SearchOption"
 
 class App extends React.Component {
   constructor(){
@@ -14,13 +15,18 @@ class App extends React.Component {
   }
   render(){
   return (
-    <div className="bg-indigo-100"> 
+    <div > 
     <Navbar />
-    <Switch>
+   
+   <Switch>
         <Route exact path='/' component={Home}/>
-
+        
         <Route path="/contact" component={Contact }/>
-        <Route path="/recipe" component={Recipe} />
+        
+        <Route path="/search/:id" component={Search}/>
+
+        <Route path="/searchop" component={SearchOption} />
+
         <Route path="*" component={NotFound} />
     </Switch>
     

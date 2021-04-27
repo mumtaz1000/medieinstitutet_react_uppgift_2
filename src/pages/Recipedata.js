@@ -2,7 +2,7 @@ import React from "react"
 import Recipe from "./Recipe"
 import { fetchRecipes, fetchRecipe } from "../components/API"
 
-class Recipes extends React.Component{
+class Recipedata extends React.Component{
     constructor(props){
         super(props)
         this.state ={}
@@ -24,4 +24,4 @@ class Recipes extends React.Component{
         )
     }
 }
-export default Recipes
+export default Recipedata;
