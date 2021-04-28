@@ -1,5 +1,5 @@
 import React from "react"
-import {Route, Switch} from "react-router-dom"
+import {Route, Switch, HashRouter} from "react-router-dom"
 import Navbar from "./components/Navbar/index.js"
 //import Sidebar from "./components/Sidebar/index"
 import Home from "./pages/Home"
@@ -16,6 +16,7 @@ class App extends React.Component {
   render(){
   return (
     <div > 
+      <HashRouter basename='/'>
     <Navbar />
    <Switch>
         <Route exact path='/' component={Home}/>
@@ -28,6 +29,7 @@ class App extends React.Component {
 
         <Route path="*" component={NotFound} />
     </Switch>
+    </HashRouter>
     
     </div> 
     

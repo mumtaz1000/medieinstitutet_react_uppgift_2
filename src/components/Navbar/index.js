@@ -15,13 +15,13 @@ const Navbar = () => {
         </NavLink>
         <Bars />
         <NavMenu>
-            <NavLink to="/contact" activeStyle>
+            <NavLink to="/contact" >
             Contact Form
             </NavLink>
-            <NavLink to="/search/:id" activeStyle>
+            <NavLink to="/search/:id" >
             Search with id
             </NavLink>
-            <NavLink to="/searchop" activeStyle>
+            <NavLink to="/searchop" >
             Search Bar
             </NavLink>
         </NavMenu>

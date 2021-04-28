@@ -1,33 +1,30 @@
-import React from "react"
-//import {Link} from "react-router-dom"
+import React from 'react';
 
-const Card = ({recipe}) =>{
-    return(
-        <div className=" px-4 py-8 max-w-md mx-auto">
-        <img src={recipe.image} 
-        alt="egg" 
-        className=" rounded-t-lg" />
-        <div className="bg-white  text-center w-full py-5 rounded-b-lg">
-        <h2 className="text-2xl mb-2">{recipe.title}</h2>
-        <p className="mb-2">I am just a humble pizza!</p>
-        <button className="bg-indigo-900 
-        hover:bg-indigo-300
-        text-white 
-        font-semibold 
-        py-2 px-2 rounded">50 sek</button>
-         <button className="bg-indigo-900 
-        hover:bg-indigo-300
-        text-white 
-        font-semibold 
-        py-2 px-2 
-        rounded
-        ml-2">
+function Card( {productName, price, description, image}   ) {
+    return (
         
-        </button>
+        <>
+        <div className="py-6 mx-6" >
+        <div className="flex max-w-md bg-white shadow-lg rounded-lg overflow-hidden">
+        <div className="w-1/3 bg-cover" > 
+        Here comes image
+        </div> 
+        <div className="w-2/3 p-4">
+        <h1 className="text-gray-900 font-bold text-2xl">{productName}</h1>
+        <p className="mt-2 text-gray-600 text-sm">{description}</p>
+        <div className="flex item-center mt-2">
+        </div>
+        <div className="flex item-center justify-between mt-3">
+        <h1 className="text-gray-700 font-bold text-xl">{price}</h1>
+        <button className="px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded">Add to Cart</button>
+        </div>
+        </div>
         </div>
         </div>
         
-        
+        </>
+       
     )
 }
+
 export default Card
