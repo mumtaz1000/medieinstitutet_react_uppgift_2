@@ -1,7 +1,7 @@
 import React from "react"
 import {Route, Switch} from "react-router-dom"
 import Navbar from "./components/Navbar/index.js"
-//import Shop from "./pages/Shop"
+//import Sidebar from "./components/Sidebar/index"
 import Home from "./pages/Home"
 import Contact from "./pages/Contact"
 import NotFound from "./pages/NotFound"
