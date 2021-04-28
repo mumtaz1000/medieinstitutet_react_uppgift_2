@@ -1,30 +1,26 @@
 import React from "react"
 import {Link} from "react-router-dom"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function Navbar(){
+
+
     return (
-      <nav className="flex justify-between items-center py-4 bg-indigo-400 font-bold"> 
-      <h1 className="text-2xl text-white text-grey-800 py-2 px-4"> Foodie App</h1> 
-      <div className="flex">
-      
-      <div className="text-xl text-white hover:text-indigo-900 py-2 px-4 ">
-      <Link to="/" >Home</Link>
-      </div>
-      <div className="text-xl text-white hover:text-indigo-900 py-2 px-4">
-      <Link to="/contact">
+      <nav className="topnav" id="myTopnav"> 
+     
+      <Link to="/" className="link">Home</Link>
+      <Link to="/contact" className="link">
         Contact Form
       </Link>
-      <Link to="/search/:id">
+      <Link to="/search/:id" className="link">
         Search Recipe
       </Link>
-      </div>
-      <button className="bg-indigo-900 
-      hover:bg-indigo-300
-      mr-8
-      text-white text-xl
-      font-bold 
-      py-2 px-4 rounded">Login/Logout</button>
-      </div> 
+      
+      <button className="loginbutton">Login/Logout</button>
+    <Link class="icon" >
+    <FontAwesomeIcon icon="fa-bars" />
+
+    </Link>
            
       </nav>
     )

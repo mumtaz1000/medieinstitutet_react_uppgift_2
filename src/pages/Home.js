@@ -7,12 +7,12 @@ import RecipeList from "./RecipeList"
 function Home(){
     const {error, isPending, recipe} = useFetch("Pizza")
     return(
-        <>
+        <div className="mainDiv">
       
 {error && <div>{error}</div>}
 {isPending && <div>Loading...</div>}
 {recipe && <RecipeList recipe={recipe} />}
-        </>
+        </div>
     )
 }
 export default Home

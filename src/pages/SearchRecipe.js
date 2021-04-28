@@ -14,11 +14,11 @@ useEffect(()=>{
   .then(res=>{setRecipe(res)})
 },[value])
     return (
-        <>
+        <div className="mainDiv">
   
 {recipe && <RecipeList recipe={recipe} />
 }
-        </>)
+        </div>)
  
 }
 

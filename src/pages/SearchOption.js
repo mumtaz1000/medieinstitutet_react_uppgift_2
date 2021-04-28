@@ -15,7 +15,7 @@ setSearch(e.target.value)
 }
 
     return ( 
-        <div>
+        <div className="mainDiv">
             <input 
             type="text"
             placeholder="Pizza"

@@ -3,8 +3,7 @@ import ContactForm from "../components/Contactform"
 
 function Contact(){
     return(
-        <div class="p-10
-        bg-indigo-100">
+        <div className="mainDiv">
         <ContactForm />
         </div>
     )
