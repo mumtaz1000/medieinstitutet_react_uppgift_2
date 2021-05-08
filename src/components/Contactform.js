@@ -1,3 +1,5 @@
+/* This contains Contact form code */
+/* Included in Medieinstitutet assignment 2 */
 import React from "react"
 class Contactform extends React.Component{
     constructor(){

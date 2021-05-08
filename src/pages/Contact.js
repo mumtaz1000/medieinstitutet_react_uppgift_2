@@ -1,3 +1,5 @@
+/* This contains contact form code */
+/* Included in Medieinstitutet assignment 2 */
 import React from "react"
 import ContactForm from "../components/Contactform"
 

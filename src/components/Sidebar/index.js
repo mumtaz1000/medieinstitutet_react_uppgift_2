@@ -1,3 +1,6 @@
+/* This contains sidebar menu code */
+/* Still working on it */
+/* Not included in Medieinstitutet assignment 2 */
 import React from "react"
 import {SidebarContainer, Icon, CloseIcon,SidebarWrapper, SidebarMenu, SidebarLink,SideBtnWrap, SidebarRoute} from "./SidebarElements"
 

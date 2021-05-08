@@ -1,3 +1,5 @@
+/* This contains spoonacular pizza search code */
+/* Not included in Medieinstitutet assignment 2 */
 import React from "react"
 import Recipe from "./Recipe"
 import { fetchRecipes, fetchRecipe } from "../components/API"

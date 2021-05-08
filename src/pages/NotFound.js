@@ -1,3 +1,5 @@
+/* This contains page not found code incase of invalide link */
+/* Not included in Medieinstitutet assignment 2 */
 import { Link } from "react-router-dom"
 
 const NotFound = () => {

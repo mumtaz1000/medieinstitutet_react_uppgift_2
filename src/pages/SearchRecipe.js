@@ -1,3 +1,6 @@
+/* This contains recipe search code */
+/* Still working on it */
+/* Not included in Medieinstitutet assignment 2 */
 import React, { useState,useEffect } from "react"
 import { useParams } from "react-router-dom"
 import { fetchRecipe } from "../components/API"

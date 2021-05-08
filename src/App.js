@@ -1,12 +1,18 @@
 import React from "react"
+import "./App.css"
 import {Route, Switch, HashRouter} from "react-router-dom"
 import Navbar from "./components/Navbar/index.js"
-//import Sidebar from "./components/Sidebar/index"
+/* This contains main App code */
+/* Still working on it */
+/* Included in Medieinstitutet assignment 2 */
 import Home from "./pages/Home"
 import Contact from "./pages/Contact"
 import NotFound from "./pages/NotFound"
-import Search from "./pages/SearchRecipe"
-import SearchOption from "./pages/SearchOption"
+import Registration from "./pages/Registration"
+import Login from "./pages/Login"
+import UploadFile from "./pages/UploadFile"
+import AddToCard from "./components/AddToCard"
+
 
 class App extends React.Component {
   constructor(){
@@ -22,10 +28,15 @@ class App extends React.Component {
         <Route exact path='/' component={Home}/>
         
         <Route path="/contact" component={Contact }/>
-        
-        <Route path="/search/:id" component={Search}/>
 
-        <Route path="/searchop" component={SearchOption} />
+        <Route path="/registration" component={Registration} />
+
+        <Route path="/login" component={Login} />
+
+        <Route path="/upload" component={UploadFile} />
+
+        <Route path="/addtocard" component={AddToCard} />
+        
 
         <Route path="*" component={NotFound} />
     </Switch>

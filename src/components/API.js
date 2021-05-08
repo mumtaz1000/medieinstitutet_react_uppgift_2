@@ -1,3 +1,5 @@
+/* This contains api code for spoonacular api */
+/* Not included in Medieinstitutet assignment 2 */
 const apiKey = "c8affffc18d74c348dd96a2cf62b801a";
 //const apiKey = "9f2dea2db0334159a87235570ef3aa6a";
 //const apiKey = "4468193b174649a0bffd59d82d6f3e2a";

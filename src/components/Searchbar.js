@@ -1,3 +1,6 @@
+/* This contains spoonacular searchbar code */
+/* Still working on it */
+/* Not included in Medieinstitutet assignment 2 */
 import React from "react"
 import PropTypes from "prop-types"
 import Autocomplete from "../components/Autocomplete"

@@ -1,3 +1,6 @@
+/* This contains hooks cart tutorial code */
+/* Still working on it */
+/* Not included in Medieinstitutet assignment 2 */
 import React, { useState, useEffect } from "react";
 
 const Shop = () => {

@@ -1,3 +1,6 @@
+/* This contains sidebar menu styling code */
+/* Still working on it */
+/* Not included in Medieinstitutet assignment 2 */
 import styled from "styled-components"
 import {FaTimes} from "react-icons/fa"
 import { LinkS } from "@fortawesome/free-solid-svg-icons"

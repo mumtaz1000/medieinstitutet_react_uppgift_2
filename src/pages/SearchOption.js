@@ -1,3 +1,5 @@
+/* This contains spoonacular searchbar code */
+/* Not included in Medieinstitutet assignment 2 */
 import React, { useState } from "react"
 import  { fetchRecipes, fetchRecipe} from "../components/API"
 import RecipeList from "../pages/RecipeList"

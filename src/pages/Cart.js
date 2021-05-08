@@ -1,3 +1,6 @@
+/* This contains product cart code */
+/* Still working on it */
+/* Not included in Medieinstitutet assignment 2 */
 const Cart = (products) => {
     return ( 
         <div>

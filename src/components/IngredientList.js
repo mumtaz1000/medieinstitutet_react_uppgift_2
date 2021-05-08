@@ -1,3 +1,5 @@
+/* This contains spoonacular search recipe with id code */
+/* Not included in Medieinstitutet assignment 2 */
 import React,{ useState} from "react"
 
 

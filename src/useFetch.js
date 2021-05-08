@@ -1,3 +1,6 @@
+/* This contains customized hook code */
+/* Still working on it */
+/* Not included in Medieinstitutet assignment 2 */
 import {useEffect, useState} from "react"
 import {fetchRecipe, fetchRecipes} from "./components/API"
 const useFetch = (SearchQuery) => {

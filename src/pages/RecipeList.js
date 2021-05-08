@@ -1,3 +1,5 @@
+/* This contains show recipe along with ingredients code */
+/* Not included in Medieinstitutet assignment 2 */
 import React from "react"
 import IngredientList from "../components/IngredientList"
 
