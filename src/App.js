@@ -2,15 +2,12 @@ import React from "react"
 import "./App.css"
 import {Route, Switch, HashRouter} from "react-router-dom"
 import Navbar from "./components/Navbar/index.js"
-/* This contains main App code */
-/* Still working on it */
-/* Included in Medieinstitutet assignment 2 */
-import Home from "./pages/Home"
-import Contact from "./pages/Contact"
-import NotFound from "./pages/NotFound"
-import Registration from "./pages/Registration"
-import Login from "./pages/Login"
-import UploadFile from "./pages/UploadFile"
+import Home from "./components/Home"
+import Contact from "./components/Contact"
+import NotFound from "./components/NotFound"
+import Registration from "./components/Registration"
+import Login from "./components/Login"
+import UploadFile from "./components/UploadFile"
 import AddToCard from "./components/AddToCard"
 
 

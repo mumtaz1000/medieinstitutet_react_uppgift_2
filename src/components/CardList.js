@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import axios from "axios";
-import Card from "../components/Card"
+import Card from "./Card"
 
 
 
@@ -32,7 +32,7 @@ function CardList() {
             
              {products.map((product)=>{
                  return (
-                     <Card key={product.id} image={product.image}  productName={product.name}  price={product.price} description= {product.description} />
+                     <Card key={product.id} image={product.img}  productName={product.name}  price={product.price} description= {product.description} />
                  )
              }) }
                

@@ -1,19 +1,43 @@
-/* This contains api code for spoonacular api */
-/* Not included in Medieinstitutet assignment 2 */
-const apiKey = "c8affffc18d74c348dd96a2cf62b801a";
-//const apiKey = "9f2dea2db0334159a87235570ef3aa6a";
-//const apiKey = "4468193b174649a0bffd59d82d6f3e2a";
-export const fetchRecipes = (searchString) => {
-    return fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey='+apiKey+'&query='+searchString)
-    .then(response => response.json())
+  
+import React, {useEffect, useState} from 'react';
+import axios from "axios";
+
+
+function  API () {
+
+    const [data , setData ] = useState({});
+    
+    useEffect(()=>{
+         const fetchData = async()=> {
+
+            try {
+         const response=   await axios.get("https://jsonplaceholder.typicode.com/todos/1")
+          // axios är ett fetch bibliotek , http get, post, update , delete  
+          console.log(response.data)
+          const res = response.data 
+          // json.string
+          setData(res)
+        }
+    
+    catch(err) {
+        console.log(err)    
+    }
+        
+}
+        fetchData()   
+    }, [])
+
+    return (
+    <>
+    data kommer att kunna skriva ut här:-  
+    {data.title}
+    <div> Hello from api </div> 
+    </>
+    
+    )
+
 }
 
-export const fetchRecipe = (id) => {
-    return fetch('https://api.spoonacular.com/recipes/'+id+'/information?apiKey='+apiKey)
-    .then(response => response.json())
-}
 
-export const searchAutocomplete = (query, number) =>{
-    return fetch('https://api.spoonacular.com/recipes/autocomplete?apiKey='+apiKey+'&number='+number+'&query='+query)
-    .then(response => response.json())
-}
+export default API;
+
