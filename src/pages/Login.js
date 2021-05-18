@@ -5,7 +5,6 @@ import axios from "axios";
 
 function Login() {
 
-  // steg 1: ?? 
   const initailValues= {
     email:"",
     password:""
@@ -46,37 +45,18 @@ function handleOnchange(e) {
     // Handle success.
     console.log('User profile', response.data.user);
     console.log('User token', response.data.jwt);
-     
-    //setJwt(response.data.jwt)
-    // spara response.data.jwt i client sidan 
     localStorage.setItem("jwt", response.data.jwt);
-
-     //setUsername(response.data.user.username)
-     
     history.push("/")
     window.location.reload();
 
-    //const JWT= localStorage.getItem("jwt")
-    //console.log(testJWT)
+  
 
-   // setJwt(JWT)
-      
-   // console.log("jwt state", jwt)
-
-
-    //console.log("user data ", response.data)
-    //setUsername(response.data.user.username)
-    // ändra state som kommer att rendera nån component vid inloggning
-  })
+    })
   .catch( (err)=>{
      console.log(err); 
-     // if user is not registered show that he needs to be registered
-    setError("Dina inloggningar stämmer inte eller du inte är registerat")
-    //setError(err.response.message[0].messages[0].message)
-  })
-   }
-// 11.00
-   
+     setError("Dina inloggningar stämmer inte eller du inte är registerat")
+    })
+   }  
 
 
 return (  
