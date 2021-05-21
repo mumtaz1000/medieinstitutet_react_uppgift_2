@@ -32,6 +32,7 @@ const Navbar = () => {
             <NavLink to="/addtocard" >
             Add to Cart
             </NavLink>
+
         </NavMenu>
             <NavBtn>
                 <NavBtnLink to="/signin">SignIn</NavBtnLink>
