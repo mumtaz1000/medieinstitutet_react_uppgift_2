@@ -2,9 +2,9 @@ import React, {useState} from 'react';
 import Modal from "react-modal";
 import axios from "axios";
 
+function Card( {productId, productName, price, description, image}   ) {
 
 
-function Card( {productName, price, description, image}   ) {
   
     const customStyles = {
         content : {
@@ -26,16 +26,18 @@ function Card( {productName, price, description, image}   ) {
         mobile:null
       }
 
-
-
-
       // state
     const [modalIsOpen,setIsOpen] = useState(false);
     const [formValues, setFormValues] = useState(initialValues)
-
+    const [userId] = useState(localStorage.getItem("userId"))
+    
+    // 
+    const [username] = useState(localStorage.getItem("username"))
+    const [token]= useState(localStorage.getItem("jwt"));
 
     function openModal() {
-
+        // if user is logged in setIsOpen to true 
+        // if not use another state for instance showLogin(true)
         setIsOpen(true)
     }
 
@@ -54,37 +56,48 @@ function Card( {productName, price, description, image}   ) {
    }
 
   async function onHandleSubmit(e){
-       
     e.preventDefault();
 
-    // gör en axios request 
-    // 11.35 
-    console.log(formValues)
-
-    console.log(Number(formValues.mobile)) 
     try {
 
         // om det är två ord 
    const response=  await axios.post("http://localhost:1337/user-bookings", {
-        name:formValues.name,
+        name:username,
         timeToAppointment:formValues.timeToAppointment,
-        mobile:Number(formValues.mobile)
-    })
+        mobile:Number(formValues.mobile),
+        // koppla username 
+        users_permissions_user:userId
+      
+    }, 
+    {headers: {
+        Authorization: `Bearer ${token}`,
+      }  
+    }
+      )
 
     console.log(response)
 }
 catch(error) {
 
-    console.log(error.data)
+    console.log(error)
 }
    }
+
+
+ function  deleteCard() {
+
+ }
 
     return (
         
         <>
+     
         <div className="py-6 mx-6" >
         <div className="flex max-w-md bg-white shadow-lg rounded-lg overflow-hidden">
-        <div className="w-1/3 bg-cover" > <img src={`http://localhost:1337${image.formats.small.url}`} alt="some image from database"/>
+        <div className="w-1/3 bg-cover" > 
+        <img 
+        src={`http://localhost:1337${image.formats.small.url}`} 
+        alt="database"/>
         </div> 
         <div className="w-2/3 p-4">
         <h1 className="text-gray-900 font-bold text-2xl">{productName}</h1>
@@ -109,7 +122,7 @@ catch(error) {
         <div className="flex item-center justify-between mt-3">
         <h1 className="text-gray-700 font-bold text-xl">{price}</h1>
         <button className="px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded" onClick={openModal} >boka</button>
-
+        <button className="px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded" onClick={deleteCard} >Delete</button>
         <Modal
           isOpen={modalIsOpen}
           onRequestClose={closeModal}
@@ -121,7 +134,7 @@ catch(error) {
           <button onClick={closeModal}>close</button>
           <div>I am a modal</div>
           <form   onSubmit= {onHandleSubmit}>
-              <input type="text" name="name" value={formValues.name}  onChange={onHandleChange} />
+              <input type="text" name="name" value={username}  onChange={onHandleChange} />
               <input type="text" name="timeToAppointment" value={formValues.timeToAppointment}  onChange={onHandleChange}  />
               <input type="number" name="mobile"  value={formValues.mobile}    onChange={onHandleChange} />
               <button type="submit">Send</button>

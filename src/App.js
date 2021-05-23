@@ -13,7 +13,9 @@ import Login from "./pages/Login"
 import UploadFile from "./pages/UploadFile"
 import AddToCard from "./components/AddToCard"
 import Bookningar from "./pages/MinaBookningar"
-
+import ForgetPassword from "./pages/Forgot-password"
+import ResetPassword from "./pages/Reset-Password"
+import CardList from "./components/CardList"
 class App extends React.Component {
   constructor(){
     super()
@@ -41,6 +43,12 @@ class App extends React.Component {
 
         <Route path="/bookningar" component={Bookningar} />
 
+        <Route path="/forgot-password" component={ForgetPassword} />
+
+        <Route path="/reset-password" component={ResetPassword} /> 
+        
+        <Route path="/cardlist" component={CardList} />
+        
         <Route path="*" component={NotFound} />
     </Switch>
     </Router>

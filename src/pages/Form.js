@@ -35,8 +35,10 @@ function Form() {
             
       {isAdmin &&  
       (<form onSubmit={onHandleSubmit} >
-            <label> ProductName:  </label> <input className="border" placeholder="Ange product name" value={formValues.productName} name="productName" onChange={onHandleChange} />
-            <label> ProductName:  </label>  <input className="border " placeholder="Ange price " type="number" name="price" value ={formValues.price} onChange={onHandleChange}/>
+            <label> ProductName:  </label> 
+            <input className="border" placeholder="Ange product name" value={formValues.productName} name="productName" onChange={onHandleChange} />
+            <label> ProductName:  </label>  
+            <input className="border " placeholder="Ange price " type="number" name="price" value ={formValues.price} onChange={onHandleChange}/>
             <button className="bg-purple-600">Lägg till </button>
        </form>) }
         

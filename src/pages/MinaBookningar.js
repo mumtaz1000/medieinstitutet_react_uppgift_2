@@ -5,8 +5,8 @@ import Booking from "../components/Booking"
 function MinaBookningar() {
 
 const [bookings, setBookings] = useState([])
-const [userId, setUserId] = useState(localStorage.getItem("userId"))
-const [token, setToken] = useState(localStorage.getItem("jwt"))
+const [userId] = useState(localStorage.getItem("userId"))
+const [token] = useState(localStorage.getItem("jwt"))
 
 useEffect(()=>{
   
@@ -43,6 +43,10 @@ useEffect(()=>{
     )
 })
 }
+
+           
+
+
         </div>
     )
 }
