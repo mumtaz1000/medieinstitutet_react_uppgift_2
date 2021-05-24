@@ -16,6 +16,8 @@ import Bookningar from "./pages/MinaBookningar"
 import ForgetPassword from "./pages/Forgot-password"
 import ResetPassword from "./pages/Reset-Password"
 import CardList from "./components/CardList"
+import Api from "./pages/API"
+
 class App extends React.Component {
   constructor(){
     super()
@@ -48,6 +50,8 @@ class App extends React.Component {
         <Route path="/reset-password" component={ResetPassword} /> 
         
         <Route path="/cardlist" component={CardList} />
+
+        <Route path="/api" component={Api} />
         
         <Route path="*" component={NotFound} />
     </Switch>

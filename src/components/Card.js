@@ -20,10 +20,9 @@ function Card( {productId, productName, price, description, image}   ) {
       };
 
       const initialValues = {
-
         name:"",
         timeToAppointment:"",
-        mobile:null
+        mobile:0
       }
 
       // state
@@ -127,6 +126,7 @@ catch(error) {
           isOpen={modalIsOpen}
           onRequestClose={closeModal}
           style={customStyles}
+          ariaHideApp={false}
           contentLabel="Example Modal"
         >
 
@@ -134,9 +134,16 @@ catch(error) {
           <button onClick={closeModal}>close</button>
           <div>I am a modal</div>
           <form   onSubmit= {onHandleSubmit}>
-              <input type="text" name="name" value={username}  onChange={onHandleChange} />
-              <input type="text" name="timeToAppointment" value={formValues.timeToAppointment}  onChange={onHandleChange}  />
-              <input type="number" name="mobile"  value={formValues.mobile}    onChange={onHandleChange} />
+              <input type="text" name="name" 
+              value={username}  
+              onChange={onHandleChange} />
+              <input type="text" 
+              name="timeToAppointment" 
+              value={formValues.timeToAppointment}  
+              onChange={onHandleChange}  />
+              <input type="number" name="mobile"  
+              value={formValues.mobile}    
+              onChange={onHandleChange} />
               <button type="submit">Send</button>
           </form>
         </Modal>

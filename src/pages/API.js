@@ -9,7 +9,7 @@ function  API () {
          const fetchData = async()=> {
 
             try {                
-         const response=   await axios.get("http://localhost:1337/user-bookings?users_permissions_user.id=14")
+         const response=   await axios.get("http://localhost:1337/user-bookings")
           // axios är ett fetch bibliotek , http get, post, update , delete  
           console.log(response.data)
           const res = response.data 
