@@ -60,7 +60,7 @@ function Card( {productId, productName, price, description, image}   ) {
     try {
 
         // om det är två ord 
-   const response=  await axios.post("http://localhost:1337/user-bookings", {
+   const response=  await axios.post("http://localhost:1337/userbookings", {
         name:username,
         timeToAppointment:formValues.timeToAppointment,
         mobile:Number(formValues.mobile),
