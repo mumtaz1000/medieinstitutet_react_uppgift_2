@@ -5,8 +5,6 @@ import dotenv from 'dotenv'
 
 dotenv.config();
 
-
-console.log(process.env.REACT_AUTHDOMAIN)
 // process.env
 
 function Child({children}) {

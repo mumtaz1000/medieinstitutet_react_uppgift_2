@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import Modal from "react-modal";
 import axios from "axios";
+import firestore from "../components/FirebaseConfig"
 
 function Card( {productId, productName, price, description, image}   ) {
 

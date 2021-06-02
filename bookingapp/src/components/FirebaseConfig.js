@@ -2,14 +2,14 @@
 import dotenv from 'dotenv'
 import firebase from "firebase"
 dotenv.config()
-console.log(process.env.REACT_APIKEY)
+console.log(process.env.REACT_APP_API_KEY)
 const firebaseConfig = {
-    apiKey:"AIzaSyBifqiEucJKs6N9FDQlY27lo1ZYwcICM3E",
-    authDomain: "mumtaz-medieinstitutet-project.firebaseapp.com",
-    projectId: "mumtaz-medieinstitutet-project",
-    storageBucket: "mumtaz-medieinstitutet-project.appspot.com",
+    apiKey:  process.env.REACT_APP_API_KEY,
+    authDomain: process.env.REACT_APP_AUTHDOMAIN,
+    projectId:process.env.REACT_APP_PROJECTID,
+    storageBucket: process.env.REACT_APP_STORAGEBUCKET,
     messagingSenderId: "378069844101",
-    appId: "1:378069844101:web:044f53de0c1ab26bae29ec",
+    appId: process.env.REACT_APP_APPID,
     measurementId: "G-JNTE8Q78KQ"
   };
 

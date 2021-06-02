@@ -14,14 +14,13 @@ const handleClick = async (event) => {
     const stripe = await stripePromise;
 
     // Call your backend to create the Checkout Session
-    const response = await axios.post("http://localhost:4242/create-checkout-session")
-    //('/create-checkout-session', { method: 'POST' });
+    const response = await axios.post("http://localhost:4242/create-checkout-session", {name:name,price:price}) //('/create-checkout-session', { method: 'POST' });
 
-    console.log(response)
+   // console.log(response)
 
     const sessionId = response.data.id
 
-    console.log(sessionId)
+   // console.log(sessionId)
     // When the customer clicks on the button, redirect them to Checkout.
     const result = await stripe.redirectToCheckout({
       sessionId: sessionId,
